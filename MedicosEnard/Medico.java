@@ -1,15 +1,15 @@
 package MedicosEnard;
 
 public class Medico {
-    private int cedula, año_titulacion;
+    private int cedula, ano_titulacion;
     private double promedio;
     private String nombre, especialidad, hospital; 
     
 
-public Medico(String nombre, int cedula, int año_titulacion, String especialidad, String hospital, double promedio) {
+public Medico(String nombre, int cedula, int ano_titulacion, String especialidad, String hospital, double promedio) {
         this.nombre = nombre;
         this.cedula = cedula;
-        this.año_titulacion = año_titulacion;
+        this.ano_titulacion = ano_titulacion;
         this.especialidad = especialidad;
         this.hospital = hospital;
         this.promedio = promedio;
@@ -17,11 +17,11 @@ public Medico(String nombre, int cedula, int año_titulacion, String especialida
 public String getNombre() {
     return nombre;
 }
-public int setCedula() {
+public int getCedula() {
         return cedula;
 }
-public int setAño() {
-    return año_titulacion;
+public int getAño() {
+    return ano_titulacion;
 }
 public String getEspecialidad() {
     return especialidad;
