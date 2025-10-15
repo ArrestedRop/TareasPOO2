@@ -104,8 +104,10 @@ public class RegistroEventoPrueba {
     //Modificador de asistencia
     public void modificarAsistencia(RegistroEvento registrador[], int pos) {
         int num_control = Integer.parseInt(JOptionPane.showInputDialog("Proporcione el numero el numero de control del alumno a modificar"));
+        boolean encontrar = false;
         for (int i = 0;i<pos;i++) {
             if (num_control == Integer.parseInt(registrador[i].getnumControl())) {
+                boolean encontrarn = true;
                 String Atendencia[] = {"Conferencias", "Talleres"};
         int opcion = JOptionPane.showOptionDialog(null, "Elige una opcion", "MENU DE OPCIONES",
                                                 JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, Atendencia, Atendencia[1]);
@@ -115,5 +117,7 @@ public class RegistroEventoPrueba {
             registrador[i].setFlag(false);
             }
         }
+        if (encontrar == false)
+            JOptionPane.showMessageDialog(null, "No se encontro el alumno");
         }
 }
